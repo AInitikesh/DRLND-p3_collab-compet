@@ -37,9 +37,9 @@ Where
 
 DDPG is an actor-critic method which uses 2 neural networks. One is Actor network that learns to predicts best action for given state and Critic network that learns to estimate the Q value for a given state action pair. Critic network is used to estimate the loss for Actor network.
 
-1) [Actor model](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/model.py#L12) - Consist of an input layer of state size(33), two fully connected hidden layers of size 200 and 150 having relu activation and output fully connected layer size of action_size(4) and tanh activation function.
+1) [Actor model](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/model.py#L12) - Consist of an input layer of state size(24), two fully connected hidden layers of size 200 and 150 having relu activation and output fully connected layer size of action_size(2) and tanh activation function.
 
-1) [Critic model](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/model.py#L44) - Consist of two input layers. First  input of state size(33) followed by fully connected hidden layer of size 200 and relu activation. We then concat the output of first hidden layer with second input ie action size(4) followed by one more hidden layer of size 150 and relu activation. Final output layer predicts a single Q value.
+1) [Critic model](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/model.py#L44) - Consist of two input layers. First  input of state size(24) followed by fully connected hidden layer of size 200 and relu activation. We then concat the output of first hidden layer with second input ie action size(2) followed by one more hidden layer of size 150 and relu activation. Final output layer predicts a single Q value.
 
 ![DDPG algorithm](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/ddpg-algo.png)
 
