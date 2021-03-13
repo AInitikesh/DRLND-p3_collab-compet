@@ -18,7 +18,7 @@ This yields a single score for each episode.
 The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
 The task is episodic, and in order to solve the environment, agent must get an average score of +0.5 over 100 consecutive episodes. 
-Training algorithm is `In [5]: ddpg` inside [Tennis.ipynb](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/Tennis.ipynb). This function iterates over `n_episodes=200` to train the ddpg agent model. Max length of episode can be `max_t=1000`. Maximum time steps value should be equal to Agent replay buffer. I have used environment version 2 where 20 parallel agents are simulated. After 200 episodes model was not learning much and average score was constant so it doesn't makes sense to train the Agent after 200 steps. 
+Training algorithm is `In [5]: ddpg` inside [Tennis.ipynb](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/Tennis.ipynb). This function iterates over `n_episodes=3000` to train the ddpg agent model. After 3000 episodes model was not learning much and average score was decreasing so it doesn't makes sense to train the Agent after 3000 steps. I have created two separate instances of ddpg agents each agent has its own Replay buffer, Actor and critic networks.
 
 ### DDPG Agent Hyper Parameters
 
@@ -31,7 +31,7 @@ Training algorithm is `In [5]: ddpg` inside [Tennis.ipynb](https://github.com/AI
 - WEIGHT_DECAY (float): L2 weight decay
 
 Where 
-`BUFFER_SIZE = int(1e5)`, `BATCH_SIZE = 128`, `GAMMA = 0.99`, `TAU = 1e-3`, `LR_ACTOR = 8e-5`, `LR_CRITIC = 8e-5` and `WEIGHT_DECAY = 0`   
+`BUFFER_SIZE = int(1e6)`, `BATCH_SIZE = 128`, `GAMMA = 0.99`, `TAU = 1e-3`, `LR_ACTOR = 8e-5`, `LR_CRITIC = 8e-5` and `WEIGHT_DECAY = 0`   
 
 ### Neural Network
 
@@ -85,6 +85,6 @@ Solved in episode: 2778 	Average score: 0.509
 
 ## Ideas for Future Work
 
-Implement other methods like Trust Region Policy Optimization (TRPO) and Truncated Natural Policy Gradient (TNPG), Proximal Policy Optimization (PPO) and Distributed Distributional Deterministic Policy Gradients (D4PG) to check the performance. 
+Implement other methods like Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments (MADDPG) having common replay buffer for both the agents. 
 
-Also tuning the hyper parameters of neural network architecture could help.
+Also adding batch normalisation layers and tuning hyper parameters of neural network architecture could help.
