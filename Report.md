@@ -41,7 +41,7 @@ DDPG is an actor-critic method which uses 2 neural networks. One is Actor networ
 
 1) [Critic model](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/model.py#L44) - Consist of two input layers. First  input of state size(33) followed by fully connected hidden layer of size 200 and relu activation. We then concat the output of first hidden layer with second input ie action size(4) followed by one more hidden layer of size 150 and relu activation. Final output layer predicts a single Q value.
 
-![DDPG algorithm](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/master/ddpg-algo.png)
+![DDPG algorithm](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/ddpg-algo.png)
 
 Referenced from original paper [CONTINUOUS CONTROL WITH DEEP REINFORCEMENT
 LEARNING](https://arxiv.org/pdf/1509.02971v6.pdf)
@@ -50,7 +50,7 @@ LEARNING](https://arxiv.org/pdf/1509.02971v6.pdf)
 
 ### Reward Plot QNetwork
 
-![Reward Plot DDPG Network](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/master/score-card.png)
+![Reward Plot DDPG Network](https://github.com/AInitikesh/DRLND-p3_collab-compet/blob/main/score-card.png)
 
 ```
 Episode 100	Average score: 0.015
