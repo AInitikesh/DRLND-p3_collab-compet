@@ -3,7 +3,7 @@
 
 ## Video 
 
-[![](http://img.youtube.com/vi/C5LOgWMtFrY/0.jpg)](http://www.youtube.com/watch?v=rC5LOgWMtFrY "")
+[![](http://img.youtube.com/vi/C5LOgWMtFrY/0.jpg)](http://www.youtube.com/watch?v=C5LOgWMtFrY "")
 
 ## Learning algorithm
 
